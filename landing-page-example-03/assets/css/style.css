@@ -1,0 +1,308 @@
+:root {
+    --gap: 3rem;
+}
+
+/* reset de css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* configurações gerais */
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Oswald', 'Trebuchet-MS', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.45;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+.main-content {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 10rem var(--gap);
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+#white-spacing {
+    height: 64.5px;
+}
+
+.menu-content {
+    display: grid;
+    grid-template-columns: 0.5fr 4fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid rgba(238, 238, 238, .8);
+    width: 100%;
+    z-index: 1;
+    padding: 1rem;
+}
+
+.white-bg {
+    background-color: #fff;
+}
+
+.main-bg {
+    background-color: #0F0F04;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' x2='0' y1='1' y2='0' gradientTransform='rotate(180,0.5,0.5)'%3E%3Cstop offset='0' stop-color='%23A78D11'/%3E%3Cstop offset='1' stop-color='%23CCCCCC'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' x1='0' x2='0' y1='0' y2='1' gradientTransform='rotate(76,0.5,0.5)'%3E%3Cstop offset='0' stop-color='%23FFE9EB'/%3E%3Cstop offset='1' stop-color='%23FFE119'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='%23FFF' fill-opacity='0' stroke-miterlimit='10'%3E%3Cg stroke='url(%23a)' stroke-width='8.25'%3E%3Cpath transform='translate(-28 -16) rotate(-16 1409 581) scale(0.88)' d='M1409 581 1450.35 511 1490 581z'/%3E%3Ccircle stroke-width='2.75' transform='translate(-100 40) rotate(-8 800 450) scale(0.98)' cx='500' cy='100' r='40'/%3E%3Cpath transform='translate(-28 60) rotate(-100 401 736) scale(0.98)' d='M400.86 735.5h-83.73c0-23.12 18.74-41.87 41.87-41.87S400.86 712.38 400.86 735.5z'/%3E%3C/g%3E%3Cg stroke='url(%23b)' stroke-width='2.5'%3E%3Cpath transform='translate(240 24) rotate(-6 150 345) scale(1.04)' d='M149.8 345.2 118.4 389.8 149.8 434.4 181.2 389.8z'/%3E%3Crect stroke-width='5.5' transform='translate(60 -120) rotate(-144 1089 759)' x='1039' y='709' width='100' height='100'/%3E%3Cpath transform='translate(-16 -16) rotate(-24 1400 132) scale(0.8)' d='M1426.8 132.4 1405.7 168.8 1363.7 168.8 1342.7 132.4 1363.7 96 1405.7 96z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-size: cover;
+    background-position: center center;
+    color: #f9f7f7e3
+    /* from svgbackgrounds */
+}
+.section {
+    min-height: 100vh;
+}
+
+.close-menu {
+    display: none;
+}
+
+.logo {
+    font-size: 3rem;
+    letter-spacing: .5rem;
+    transition: all 450ms ease-in;
+    color: #c50d66;
+}
+
+.logo:hover {
+    opacity: .5;
+}
+
+/* Menu de navegação */
+
+.social-media-items, .logo {
+    display: flex;
+}
+
+.nav-items {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(auto, auto));
+    justify-content: center;
+}
+
+
+.nav-items a {
+    display: block;
+    color: #c00861;
+    font-weight: 500;
+    letter-spacing: .2rem;
+    transition: all 400ms ease-in;
+    position: relative;
+    margin-left: 2rem;
+}
+
+.social-media-items a {
+    display: block;
+    padding: 1rem;
+    color: #c00861;
+    font-weight: 500;
+    transition: all 400ms ease-in;
+    position: relative;
+}
+
+.nav-items a:hover, .social-media-items a:hover {
+    color: #c00861;
+    opacity: .5;
+}
+
+.nav-items a::after {
+    content:'';
+    background-color: #af0527;
+    height: .25rem;
+    position: absolute;
+    width: 0;
+    left: 50%;
+    margin-left: 0;
+    bottom: -1rem;
+    opacity: .75;
+    transition: all 400ms ease-in;
+}
+
+.nav-items a:hover::after {
+    width: 50%;
+    left: 25%; 
+}
+
+/* capa */
+.grid-home {
+    display: grid;
+    grid-template-columns: minmax(320px, 1.5fr) 1fr;
+    gap: var(--gap);
+    position: relative;
+    min-height: 100vh;
+}
+
+.grid-item-text, .home-img {
+    display: flex;
+    justify-content: center;
+    flex-flow: column nowrap;
+}
+
+.home-img img {
+    width: 100%;
+    height: auto;
+}
+
+#home h1 {
+    margin-bottom: 4rem;
+}
+
+/* intro */
+
+.intro-content{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.intro-content h1 {
+    padding: 5rem;
+}
+
+.intro-content p {
+    margin: 1.5rem;
+}
+
+/* gallery */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap);
+}
+
+.grid-item {
+    display: grid;
+    grid-template-rows: .5fr 3fr minmax(1fr, auto);
+    max-height: 5fr;
+}
+
+.grid-item h2 {
+    color: #fff;
+    padding-bottom: 3rem;
+}
+
+.grid-img {
+    width: 100%;
+    max-width: 36rem;
+    max-height: 36rem;
+    overflow: hidden;
+}
+
+.gallery-grid img {
+    transition: all 300ms ease-in-out;
+}
+
+.gallery-grid img:hover {
+    transform: translate(-3%, 0) scale(1.2) rotate(5deg);
+}
+
+#gallery h1 {
+    text-align: center;
+    padding: 5rem;
+    color: #fff;
+}
+
+.grid-item p {
+    text-align: justify;
+    margin-top: 1.5rem;
+    color: #fff;
+}
+
+/* formulário */
+.contact {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    color: #9b014b;
+}
+
+.contact legend {
+    font-style: italic;
+    letter-spacing: .5rem;
+    text-align: center;
+    padding: 5rem;
+}
+
+.form-name {
+    display: flex;
+}
+
+.contact input {
+    margin-right: 2rem;
+}
+
+.contact input, .contact label {
+    width: auto;
+    height: auto;
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+}
+
+.contact input::placeholder, textarea::placeholder {
+    font-style: italic;
+}
+
+.contact label {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+input.form-btn {
+    width: 100%;
+    background-color: #9b014b;
+    color: #fff;
+    border: 0.01rem solid black;
+    cursor: pointer;
+    padding: 1.5rem;
+    letter-spacing: 0.4rem;
+    font-size: 1.5rem;
+    transition: all 500ms ease-in;
+
+}
+
+input.form-btn:hover {
+    background-color: #fff;
+    color: #9b014b;
+
+}
+
+fieldset {
+    border: none;
+}
+
+/* rodapé */
+footer {
+    padding: 3rem;
+}
+
+footer, footer p {
+    text-align: center;
+}
