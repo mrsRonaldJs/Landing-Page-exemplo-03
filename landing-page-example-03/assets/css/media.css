@@ -27,6 +27,7 @@
 
 }
 
+
 @media (max-width: 640px) {
     
     .menu {
@@ -34,18 +35,18 @@
         text-align: center;
         bottom: 0;
     }
-
+    
     .close-menu:checked~.menu{
         display: block;
     }
-
+    
     .menu-content {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         min-height: 100vh;
     }
-
+    
     .nav-items{
         display: flex;
         flex-direction: column;
@@ -55,17 +56,17 @@
         margin-left: 0;
         padding: 5rem;
     }
-
+    
     .logo {
         display: block;
     }
-
+    
     .close-menu:checked~.close-menu-label::after{
         content: '✖';
         position: fixed;
     }
 
-
+    
     .close-menu-label::after {
         content: '☰';
         background: #3b0027;
@@ -82,5 +83,21 @@
         padding: .5rem;
         cursor: pointer;
     }
+    
+}
 
+@media (max-width: 432px) {
+
+    .contact input {
+        margin-right: 0;
+    }
+    
+    .form-name {
+        flex-direction: column;
+    }
+
+    .last-name label {
+        display: inline-block;
+        width: 111.5px;
+    }
 }

@@ -13,6 +13,7 @@
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
+    min-width: 342px;
 }
 
 body {
@@ -27,6 +28,7 @@ h1 {
 
 .main-content {
     max-width: 120rem;
+    width: 100%;
     margin: 0 auto;
     padding: 10rem var(--gap);
 }
@@ -45,6 +47,7 @@ ul {
 
 .menu-content {
     display: grid;
+    width: 100%;
     grid-template-columns: 0.5fr 4fr 1fr;
     justify-content: space-between;
     align-items: center;
@@ -294,8 +297,9 @@ input.form-btn:hover {
 
 }
 
-fieldset {
+fieldset.contact {
     border: none;
+    align-content: center;
 }
 
 /* rodapé */
